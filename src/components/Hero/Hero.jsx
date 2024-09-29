@@ -6,7 +6,7 @@ const Hero = () => {
     <div>
       <div className="min-h-[550px] sm:min-h-[600px] bg-primaryMaroon flex justify-center items-center">
         <div className="container pb-8 sm:pb-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 ">
             {/* text content section */}
             <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left">
               <h1
@@ -29,7 +29,7 @@ const Hero = () => {
             </div>
 
             {/* Hero Image section  */}
-            <div className="bg-white w-fit rounded-full"><img src={HeroPng} className="shadow-1" alt="" /></div>
+            <div className="bg-white w-fit rounded-full m-auto"><img src={HeroPng} className="shadow-1" alt="" /></div>
           </div>
         </div>
       </div>
