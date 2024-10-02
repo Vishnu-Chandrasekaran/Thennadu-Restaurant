@@ -424,11 +424,7 @@ const Menu = () => {
           delay: 100
         });
         AOS.refresh();
-        
-    
       })
-  const [breakFast, setBreakFast] = useState(false);
-  const [dosa, setDosa] = useState(false);
   const [foodCategory, setFoodCategory] = useState("breakfast");
   const handleClick = (category) => {
     setFoodCategory(category);
@@ -451,7 +447,7 @@ const Menu = () => {
               <button
                 className={` p-2 shadow-[6px_6px_#000] font-mont ${
                   foodCategory === itemList.category
-                    ? "text-white bg-primaryMaroon"
+                    ? "text-white bg-orange-400"
                     : "bg-white text-primaryMaroon"
                 }`}
                 onClick={() => {
@@ -462,16 +458,16 @@ const Menu = () => {
               </button>
             ))}
           </div>
-          <div className="w-72">
+          <div className="w-72 lg:w-96">
             {menuItemsData.map((itemList) => (
-              <div className="mt-16 text-white mb-16">
+              <div key={itemList.category} className="mt-16 text-white mb-16">
                 {itemList.category === foodCategory &&
                 <>
                 <div>
                 {itemList.category === "lunch" && (
                     <>
                     <h1 className="text-orange-400"> Business Lunch </h1>
-                    <div className="flex justify-center w-96 gap-10 p-2 border-2 items-center mb-5">
+                    <div className="flex justify-center w-72 lg:w-96 gap-10 p-2 border-2 items-center mb-5">
                         
                       <p>
                         Meals + Briyani Rice + Sambar Rice + Curd Rice + Veg
@@ -487,7 +483,7 @@ const Menu = () => {
                 {itemList.category === "breakfast" && (
                     <>
                     <h1 className="text-orange-400"> Mini Breakfast </h1>
-                    <div className="flex justify-center w-96 gap-10 p-2 border-2 items-center mb-5">
+                    <div className="flex justify-center w-72 lg:w-96 gap-10 p-2 border-2 items-center mb-5">
                         
                       <p>
                         1 Dosa + 2 Idly + Pongal + Vada + Kesari + Sambar + Chutney
@@ -502,7 +498,7 @@ const Menu = () => {
                     <>
                       {" "}
                       
-                      <div className=" flex justify-between items-center w-96 gap-10 p-2">
+                      <div key={food.dishName} className=" flex justify-between items-center w-96 gap-10 p-2">
                         <p className="w-full">{food.dishName}</p>{" "}
                         <p className="w-full text-orange-400">
                           {food.dishPrice}
