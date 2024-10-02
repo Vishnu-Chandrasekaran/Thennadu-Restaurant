@@ -462,7 +462,7 @@ const Menu = () => {
               </button>
             ))}
           </div>
-          <div>
+          <div className="w-72">
             {menuItemsData.map((itemList) => (
               <div className="mt-16 text-white mb-16">
                 {itemList.category === foodCategory &&
