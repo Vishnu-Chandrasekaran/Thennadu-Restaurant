@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navigation/Navbar";
 import SpiceImage from "../../assets/spices_stall_new.jpg";
-
+import AOS from 'aos'
+import "aos/dist/aos.css"
 const menuItemsData = [
   {
     category: "breakfast",
@@ -415,6 +416,17 @@ const menuItemsData = [
   },
 ];
 const Menu = () => {
+    useEffect(()=>{
+        AOS.init({
+          offset: 100,
+          duration: 700,
+          easing: "ease-in",
+          delay: 100
+        });
+        AOS.refresh();
+        
+    
+      })
   const [breakFast, setBreakFast] = useState(false);
   const [dosa, setDosa] = useState(false);
   const [foodCategory, setFoodCategory] = useState("breakfast");
