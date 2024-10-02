@@ -87,12 +87,12 @@ const Specials = () => {
       <div className="container">
         {/* Header section */}
         <div className="mb-10 space-y-5 flex flex-col justify-center items-center">
-          <h1 className="text-center text-4xl font-bold font-mont">Our Specials</h1>
-          <Link to="/menu" className="primary-btn" >View Full Menu</Link>   
+          <h1 data-aos="fade-up" className="text-center text-4xl font-bold font-mont">Our Specials</h1>
+          <Link data-aos="fade-up" data-aos-delay="200" to="/menu" className="primary-btn" >View Full Menu</Link>   
         </div>
         
         {/* Slider Section */}
-        <div>
+        <div data-aos="zoom-in">
             <Slider {...settings}>
                 {
                     SpecialsData.map((item) => (
