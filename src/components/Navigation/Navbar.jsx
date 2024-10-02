@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/thennaduLogo.png'
 import { FaBars } from 'react-icons/fa'
+import { FaXmark } from 'react-icons/fa6'
 
 const Menu = [
     {
@@ -59,7 +60,7 @@ const Navbar = () => {
                 <div >
                     <div className='lg:hidden' >
                         <button onClick={handleOpen}>
-                            <FaBars className='text-3xl text-white'></FaBars>
+                            {!open ? <FaBars className='text-3xl text-white'></FaBars>: <FaXmark className='text-3xl text-white'></FaXmark>}
                         </button>
                     </div>
                     {/* Doropdown menu section */}
