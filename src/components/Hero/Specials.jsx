@@ -2,6 +2,8 @@ import React from "react";
 import BucketBriyani from "../../assets/Bucket_briyani.jpg";
 import ChickenBBQ from "../../assets/ChickenBBQ.jpg";
 import IdlyFish from "../../assets/IdlyFish.jpg";
+import MuttonBriyani from "../../assets/muttonBriyaniBucket.jpg";
+import FishBBQ from "../../assets/FishBBQW.jpg";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
@@ -14,7 +16,7 @@ const SpecialsData = [
   },
   {
     id: 2,
-    name: "Chicken BBQ",
+    name: "Chicken Barbecue",
     price: "20 QR",
     img: ChickenBBQ,
   },
@@ -26,21 +28,21 @@ const SpecialsData = [
   },
   {
     id: 4,
-    name: "1KG Bucket Briyani Chicken",
-    price: "39 QR",
-    img: BucketBriyani,
+    name: "1KG Bucket Briyani Mutton",
+    price: "69 QR",
+    img: MuttonBriyani,
   },
   {
     id: 5,
-    name: "Chicken BBQ",
-    price: "20 QR",
-    img: ChickenBBQ,
+    name: "Fish Barbecue",
+    price: "25 QR",
+    img: FishBBQ,
   },
   {
     id: 6,
-    name: "Idly + Fish Kulambu + Fish Piece",
-    price: "8 QR",
-    img: IdlyFish,
+    name: "Chicken Barbecue",
+    price: "20 QR",
+    img: ChickenBBQ,
   },
 ];
 const Specials = () => {
