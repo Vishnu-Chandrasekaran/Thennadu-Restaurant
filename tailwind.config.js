@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'menu-background': "url('./src/assets/image-spice.jpg')",
+
+      },
       colors:{
         primary: "#5d60c1",
         dark:"#1e1e1e",
@@ -15,7 +19,8 @@ export default {
       },
       fontFamily:{
         sans: ["Poppins", "sans-serif"],
-        cursive: ["Allura", "cursive"]
+        cursive: ["Allura", "cursive"],
+        mont : ["montserrat","sans-serif"]
       },
       container:{
         center:true,

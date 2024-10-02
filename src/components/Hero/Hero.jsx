@@ -24,7 +24,7 @@ const Hero = () => {
                 home food with excess love and hygiene. 
               </p>
               <div>
-                <button className="primary-btn">Visit us</button>
+                <a href="https://maps.app.goo.gl/LsrYa5Vq2WQcxAv76" className="primary-btn" >Visit us</a>
               </div>
             </div>
 

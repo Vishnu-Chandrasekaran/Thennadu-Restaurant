@@ -6,22 +6,22 @@ const Menu = [
     {
         id: 1,
         name: "Home",
-        link: "#"
+        link: "/"
     },
     {
         id: 2,
         name: "About",
-        link: "#"
+        link: "/"
     },
     {
         id: 3,
         name: "Menu",
-        link: "#"
+        link: "/menu"
     },
     {
         id: 4,
         name: "Contact",
-        link: "#"
+        link: "/#contact"
     },
     // {
     //     id: 5,
@@ -36,11 +36,11 @@ const Navbar = () => {
     }
   return (
     <> <div className="bg-primaryMaroon">
-        <div className="container py-2">
-            <div className="flex justify-between items-center">
+        <div className="container py-2 ">
+            <div className="flex justify-between items-center ">
                 {/* Logo Section */}
                 <div>
-                    <a href="#">
+                    <a href="/">
                         <img src={Logo} alt="Logo" className='w-36'/>
                     </a>
                 </div>
@@ -56,23 +56,25 @@ const Navbar = () => {
                 </div>
 
                 {/* Responsive Mobile Section */}
-                <div className='lg:hidden'>
-                    <button onClick={handleOpen}>
-                        <FaBars className='text-3xl text-white'></FaBars>
-                    </button>
+                <div >
+                    <div className='lg:hidden' >
+                        <button onClick={handleOpen}>
+                            <FaBars className='text-3xl text-white'></FaBars>
+                        </button>
+                    </div>
+                    {/* Doropdown menu section */}
+                    {
+                        open && (
+                            <div onBlur={()=>setOpen(false)}>
+                                <ul className='bg-white text-primaryMaroon space-y-3 p-4 rounded-md shadow-md absolute right-16 top-20 z-50'>
+                                {Menu.map((menu) => (
+                                    <li key={menu.id} ><a className='inline-block text-xl p-4  hover:bg-primaryMaroon hover:text-white w-full rounded-md' href={menu.link}>{menu.name}</a></li>
+                                ))}
+                                </ul>
+                            </div>
+                        )
+                    }
                 </div>
-                {/* Doropdown menu section */}
-                {
-                    open && (
-                        <>
-                            <ul className='bg-white text-primaryMaroon space-y-3 p-4 rounded-md shadow-md absolute right-16 top-20 z-50'>
-                            {Menu.map((menu) => (
-                                <li key={menu.id} ><a className='inline-block text-xl p-4  hover:bg-primaryMaroon hover:text-white w-full rounded-md' href={menu.link}>{menu.name}</a></li>
-                            ))}
-                            </ul>
-                        </>
-                    )
-                }
 
             </div>
         </div>

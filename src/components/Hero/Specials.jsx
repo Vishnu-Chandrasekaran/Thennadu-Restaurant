@@ -3,6 +3,7 @@ import BucketBriyani from "../../assets/Bucket_briyani.jpg";
 import ChickenBBQ from "../../assets/ChickenBBQ.jpg";
 import IdlyFish from "../../assets/IdlyFish.jpg";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const SpecialsData = [
   {
@@ -82,18 +83,20 @@ const Specials = () => {
   };
 
   return (
-    <div className="py-12 bg-white text-primaryMaroon">
+    <div className="py-12 bg-white text-primaryMaroon" id="specials">
       <div className="container">
         {/* Header section */}
-        <div className="mb-10 space-y-5">
+        <div className="mb-10 space-y-5 flex flex-col justify-center items-center">
           <h1 className="text-center text-4xl font-bold">Our Specials</h1>
+          <Link to="/menu" className="primary-btn" >View Full Menu</Link>   
         </div>
+        
         {/* Slider Section */}
         <div>
             <Slider {...settings}>
                 {
                     SpecialsData.map((item) => (
-                        <div className="my-16">
+                        <div className="my-10">
                             <div className=" flex flex-col gap-4 py-8 px-6 mx-4 rounded-xl">
                                 {/* Image section */}
                                 <div className="mb-3 flex justify-center">
