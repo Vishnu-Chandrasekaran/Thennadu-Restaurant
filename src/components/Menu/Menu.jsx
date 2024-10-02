@@ -425,7 +425,7 @@ const Menu = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-primaryMaroon h-full min-h-screen">
+      <div className="bg-primaryMaroon h-full min-h-screen font-mont">
         <div
           className="h-52 bg-cover flex justify-center items-center"
           style={{ backgroundImage: `url(${SpiceImage})` }}

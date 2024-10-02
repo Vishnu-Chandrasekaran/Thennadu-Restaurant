@@ -36,7 +36,7 @@ const Navbar = () => {
         setOpen(!open)
     }
   return (
-    <> <div className="bg-primaryMaroon">
+    <> <div className="bg-primaryMaroon font-mont">
         <div className="container py-2 ">
             <div className="flex justify-between items-center ">
                 {/* Logo Section */}

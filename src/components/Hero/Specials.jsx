@@ -83,11 +83,11 @@ const Specials = () => {
   };
 
   return (
-    <div className="py-12 bg-white text-primaryMaroon" id="specials">
+    <div className="py-12 bg-white text-primaryMaroon font-mont" id="specials">
       <div className="container">
         {/* Header section */}
         <div className="mb-10 space-y-5 flex flex-col justify-center items-center">
-          <h1 className="text-center text-4xl font-bold">Our Specials</h1>
+          <h1 className="text-center text-4xl font-bold font-mont">Our Specials</h1>
           <Link to="/menu" className="primary-btn" >View Full Menu</Link>   
         </div>
         

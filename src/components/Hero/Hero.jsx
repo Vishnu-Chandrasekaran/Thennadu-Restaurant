@@ -4,7 +4,7 @@ import HeroPng from '../../assets/noBGLogo.png'
 const Hero = () => {
   return (
     <div>
-      <div className="min-h-[550px] sm:min-h-[600px] bg-primaryMaroon flex justify-center items-center">
+      <div className="min-h-[550px] sm:min-h-[600px] bg-primaryMaroon flex justify-center items-center font-mont">
         <div className="container pb-8 sm:pb-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 ">
             {/* text content section */}
@@ -15,11 +15,11 @@ const Hero = () => {
               "
               >
                 Thennadu{" "}
-                <span className="text-2xl font-sans text-orange">
+                <span className="text-2xl font-mont text-orange">
                   Restaurant
                 </span>
               </h1>
-              <p className="text-md text-white font-sans">
+              <p className="text-md text-white font-mont">
                 We serve the authentic South Indian flavours which resembles the
                 home food with excess love and hygiene. 
               </p>
